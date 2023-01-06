@@ -1,0 +1,360 @@
+
+/* Style for Navigation */
+
+.body{
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+/* .inlineBlock{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 24px;
+    font-family: 'Martian Mono', monospace;
+    font-size: 19px;
+} */
+
+
+.inlineBlock{
+    display: flex;
+    flex-direction: row;
+    padding-right: 8px;
+    padding-left: 8px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Martian Mono', monospace;
+    font-size: 19px;
+   
+}
+
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 41px;
+    height: 8px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+a {
+    color: black;
+    font-style: unset;
+    text-decoration: none;
+}
+
+li:hover {
+    color: #59CE9C;
+    background-color: #59CE9C
+}
+
+/* .Logo {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 98%;
+    padding: 1%;
+    gap: 600px;
+} */
+
+nav {
+    width: 100%;
+    
+    gap: 16;
+   
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-menu {
+    gap: 32px;
+   display: flex;
+   justify-content: flex-end;
+    width: 90%;
+ margin-right: 100%;
+}
+.mySkills {
+    margin-top: 124px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.meTitle{
+    background-color: #59CE9C;
+   line-height: 0px;
+    display: inline-block;
+
+}
+
+
+h1{
+    font-family: 'Martian Mono', monospace;
+    font-size: 48px ;
+ 
+}
+
+h2{
+    font-family: 'Martian Mono', monospace;
+    font-size: 32px ;
+    margin-top: 104px;
+    scroll-margin-left: 100px;
+}
+
+h3{font-family: 'Lato', sans-serif;
+    font-size: 27.6px;
+
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    font-size: 27.6px;
+    margin-top: 5%;
+    letter-spacing: 1px;
+   line-height: 180%;
+
+}
+
+.myPortrait{
+    display: flex;
+    justify-content: center;
+    margin-top: 124px;
+}
+
+/* Skills box style Using Flex */
+
+.Skills{
+    margin-top: 132px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8px;
+    
+}
+
+.Research {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    -webkit-text-fill-color: white;
+    width: 450px;
+    height: 398px;
+    
+}
+
+.uiDesign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    -webkit-text-fill-color: white;
+    width: 450px;
+    height: 398px;
+}
+
+.webDev {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    -webkit-text-fill-color: white;
+    width: 450px;
+    height: 398px;
+}
+
+
+/* GRID WORK */
+
+.myWork {
+    margin-top: 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.workGrid {
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "top top top"
+    "bottom bottom bottom";
+}
+
+.Work1 {
+    margin-top: 64px;
+    grid-area: top;
+}
+
+.Work2 {
+    grid-area: bottom;
+}
+
+.button {
+    background-color: #59CE9C;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 56px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    height: 500px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 8px;
+    margin-top: 15%;
+   
+}
+
+
+.letsWork {
+    display: flex;
+    color: white;
+    text-align: center;
+    line-height: 10%;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.Logos{
+    display:flex;
+    margin-bottom: 5%;
+    align-items: flex-start;
+    justify-content: space-evenly; 
+    width: 200px;
+    margin-top: 32px;
+}
+
+
+/* ====Media Query==== */
+
+@media only screen and (max-width: 1200px ) {
+    .Skills{
+        margin-top: 132px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+ 
+}
+}
+
+ @media only screen and (max-width: 1200px ) {
+    .Work1{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+    }
+ }
+
+ @media only screen and (max-width: 1200px ) {
+    .Workimage1{
+        display: grid;
+        grid-area: top;
+    margin-top: 88px;
+    margin-bottom: 48px;
+     transform: scale(2, 2);
+     -ms-transform: scale(2, 2);
+     -webkit-transform: scale(2, 2);
+   
+    }
+ }
+
+ @media only screen and (max-width: 1200px ) {
+    .Work2{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+    }
+ }
+
+ @media only screen and (max-width: 1200px ) {
+    .Workimage2{
+        display: grid;
+        grid-area: middle;
+    margin-top: 88px;
+     transform: scale(2, 2);
+     -ms-transform: scale(2, 2);
+     -webkit-transform: scale(2, 2);
+    }
+ }
+
+ @media only screen and (max-width: 1200px ) {
+    .workGrid{
+            display: grid;
+            gap: 32px;
+            grid-template-rows: 3fr;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "top"
+            "middle "
+            "bottom"
+            ;
+        }
+    }
+
+    @media only screen and (max-width: 1200px ) {
+        .button{
+            display: grid;
+            grid-area: bottom;
+        }
+    }
+
+    @media only screen and (max-width: 1200px ) {
+        .myWork{
+           gap: 64px;
+        }
+    }
+
+
+    @media (max-width: 1200px ) {
+       .hamburger{
+        display: block;
+       height: 200%;
+       width: 200%;
+       margin-right: 100px;
+    }
+}
+    @media only screen and (max-width: 1200px ) {
+    .navbox{
+    display: inline-block;
+    margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 1200px ) {
+    .nav-menu{
+        display:none;
+    }
+}
+
