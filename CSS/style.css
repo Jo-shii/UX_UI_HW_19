@@ -48,10 +48,7 @@ a {
     text-decoration: none;
 }
 
-li:hover {
-    color: #59CE9C;
-    background-color: #59CE9C
-}
+
 
 /* .Logo {
     display: flex;
@@ -68,6 +65,21 @@ nav {
     gap: 16;
    
 }
+
+/* INTERACTIVE STATES HW 19 */
+
+/* NAV BAR HOVER INTERACTION */
+.active {
+    color: #59CE9C;
+    background-color: #59CE9C;
+}
+
+.inlineBlock:hover {
+    color: #59CE9C;
+    background-color: #59CE9C
+}
+
+
 
 .navigation{
     display: flex;
