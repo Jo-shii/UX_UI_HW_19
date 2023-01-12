@@ -30,11 +30,14 @@
 .hamburger{
     display:none;
     cursor: pointer;
+    width: 50px;
+    height: 64px;
+    /* right: 100px; */
 }
 
 .bar{
     display: block;
-    width: 41px;
+    width: 100%;
     height: 8px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -66,6 +69,11 @@ nav {
    
 }
 
+.nav-menu{
+position: relative;
+    z-index: 1;
+}
+
 /* INTERACTIVE STATES HW 19 */
 
 /* NAV BAR HOVER INTERACTION */
@@ -74,10 +82,170 @@ nav {
     background-color: #59CE9C;
 }
 
-.inlineBlock:hover {
+li:hover {
     color: #59CE9C;
     background-color: #59CE9C
 }
+
+/* Overlay & Overlay Style */
+
+
+
+.overlay {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease;
+}
+
+
+
+
+.work:hover .overlay { 
+    opacity: 1;
+}
+
+
+/* .overlaybtn{
+    position:absolute;
+    left:0;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+} */
+
+
+.overlaybtn a {
+    
+    width: 200px;
+   
+    text-align: center;
+    padding: 32px 48px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Lato', sans-serif;
+    -webkit-text-fill-color: black;
+    background-color: #59CE9C;
+    font-size: 21px;
+    
+    border-radius: 10px;
+  }
+
+
+  .Work1:hover .overlaybtn {
+    opacity: 1;
+  }
+  
+  .Work2:hover .overlaybtn2 {
+    opacity: 1;
+  }
+  
+
+
+/* Button Effect View All Projects */
+
+
+.button {
+    min-width: 500px;
+    min-height: 60px;
+    margin-right: 500x;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #59CE9C;
+  background: linear-gradient(90deg, 59CE9C(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(500px + 12px);
+    min-height: calc(120px + 12px);
+    
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #59CE9C;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -189,18 +357,21 @@ p{
 
 /* GRID WORK */
 
+
 .myWork {
-    margin-top: 132px;
+    padding-top: 132px;
+    padding-bottom: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     
 }
 
 .workGrid {
     display: grid;
-    grid-template-rows: 2fr;
+    gap: 64px;
+    grid-template-rows: 3fr;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "top top top"
@@ -208,26 +379,34 @@ p{
 }
 
 .Work1 {
-    margin-top: 64px;
+    /* margin-top: 32px; */
     grid-area: top;
+    position:relative;
+ 
+
 }
 
 .Work2 {
     grid-area: bottom;
+    /* margin-top: 64px; */
+    position: relative;
 }
 
 .button {
     background-color: #59CE9C;
     border: none;
     color: rgb(0, 0, 0);
-    padding: 10px 56px;
+    padding: 10px 64px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin-top: 32px;
+    width: 400px;
     cursor: pointer;
     border-radius: 10px;
+    margin-left: 400px;
+    
+    
 }
 
 
@@ -293,7 +472,8 @@ p{
         display: grid;
         grid-area: top;
     margin-top: 88px;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
+    gap: 52px;
      transform: scale(2, 2);
      -ms-transform: scale(2, 2);
      -webkit-transform: scale(2, 2);
@@ -307,6 +487,7 @@ p{
      align-items: center;
      justify-content: center;
      flex-direction: column;
+     
     }
  }
 
@@ -318,11 +499,12 @@ p{
      transform: scale(2, 2);
      -ms-transform: scale(2, 2);
      -webkit-transform: scale(2, 2);
+     
     }
  }
 
  @media only screen and (max-width: 1200px ) {
-    .workGrid{
+    /* .workGrid{
             display: grid;
             gap: 32px;
             grid-template-rows: 3fr;
@@ -333,12 +515,13 @@ p{
             "bottom"
             ;
         }
-    }
+    } */
 
     @media only screen and (max-width: 1200px ) {
         .button{
-            display: grid;
-            grid-area: bottom;
+            display: block;
+            margin-top: 160px;
+            margin-left: 150px;
         }
     }
 
@@ -352,21 +535,53 @@ p{
     @media (max-width: 1200px ) {
        .hamburger{
         display: block;
-       height: 200%;
-       width: 200%;
-       margin-right: 100px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
     @media only screen and (max-width: 1200px ) {
-    .navbox{
-    display: inline-block;
-    margin-right: 50px;
+    #navbox{
+    display: flex !important; 
+    justify-content: flex-end;
+   
+   
     }
 }
 
 @media only screen and (max-width: 1200px ) {
     .nav-menu{
-        display:none;
+       position: fixed;
+       left: -110%;
+       top: 80px;
+       gap:0;
+       flex-direction: column;
+       background-color: black;
+       width:100%;
+       text-align: center;
+       transition: 0.3s;
     }
+    .inlineBlock {
+        margin:16px 0;
+    }
+.nave-menu.active {
+    left: 0%;
 }
 
+.myPortrait {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.overlay {
+    display: none;
+}
+}
